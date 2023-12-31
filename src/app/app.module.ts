@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,11 +29,13 @@ import { FooterComponent } from './yummy/footer/footer.component';
     BookATableComponent,
     GalleryComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbCarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
