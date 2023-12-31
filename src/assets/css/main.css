@@ -1352,6 +1352,7 @@ section {
 --------------------------------------------------------------*/
 .gallery {
   overflow: hidden;
+  margin-top: 20px;
 }
 
 .gallery .swiper-pagination {
