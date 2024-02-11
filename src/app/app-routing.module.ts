@@ -10,9 +10,13 @@ import { AboutUsComponent } from './yummy/about-us/about-us.component';
 import { HomeComponent } from './yummy/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 
 const routes: Routes = [
+    {
+      path: '',
+      redirectTo: 'accueil',
+      pathMatch: 'full'
+    },
 
     {
       path : 'accueil',
@@ -54,6 +58,10 @@ const routes: Routes = [
     {
       path: 'bookatable',
       component: BookATableComponent
+  },
+    {
+    path: 'auth',
+    loadChildren: () => import('./authentification/authentification.module').then(m => m.AuthentificationModule)
     },
 
     {
