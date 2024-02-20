@@ -10,6 +10,7 @@ import { AboutUsComponent } from './yummy/about-us/about-us.component';
 import { HomeComponent } from './yummy/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LayoutComponent } from './layouts/layout.component';
 
 const routes: Routes = [
     {
@@ -63,7 +64,11 @@ const routes: Routes = [
     path: 'auth',
     loadChildren: () => import('./authentification/authentification.module').then(m => m.AuthentificationModule)
     },
-
+    {
+      path: 'admin',
+      component: LayoutComponent,
+      loadChildren: () => import('./management/management.module').then(m => m.ManagementModule),
+    },
     {
       path: "**",
       redirectTo:"accueil",
