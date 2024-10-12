@@ -1,20 +1,16 @@
 import { Component, OnInit, EventEmitter, Output, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
-import { EventService } from '../../core/services/event.service';
 
 //Logout
-import { environment } from '../../../environments/environment';
-import { AuthenticationService } from '../../core/services/auth.service';
-import { AuthfakeauthenticationService } from '../../core/services/authfake.service';
-import { TokenStorageService } from '../../core/services/token-storage.service';
 import { Router } from '@angular/router';
 
 // Language
 import { CookieService } from 'ngx-cookie-service';
-import { LanguageService } from '../../core/services/language.service';
 import { TranslateService } from '@ngx-translate/core';
 import { CartModel } from './topbar.model';
 import { cartData } from './data';
+import { EventService } from 'src/app/core/shared/services/event.service';
+import { LanguageService } from 'src/app/core/shared/services/language.service';
 
 @Component({
   selector: 'app-topbar',
@@ -37,12 +33,19 @@ export class TopbarComponent implements OnInit {
   countryName: any;
   cookieValue: any;
 
-  constructor(@Inject(DOCUMENT) private document: any, private eventService: EventService, public languageService: LanguageService,
-    public _cookiesService: CookieService, public translate: TranslateService, private authService: AuthenticationService, private authFackservice: AuthfakeauthenticationService,
-    private router: Router, private TokenStorageService: TokenStorageService) { }
+  constructor(@Inject(DOCUMENT) private document: any, 
+  private eventService: EventService, 
+  public languageService: LanguageService,
+    public _cookiesService: CookieService, 
+    public translate: TranslateService, 
+    // private authService: AuthenticationService, 
+    // private authFackservice: AuthfakeauthenticationService,
+    private router: Router, 
+    // private TokenStorageService: TokenStorageService
+    ) { }
 
   ngOnInit(): void {
-    this.userData = this.TokenStorageService.getUser();
+    // this.userData = this.TokenStorageService.getUser();
     this.element = document.documentElement;
 
     // Cookies wise Language set
@@ -164,7 +167,11 @@ export class TopbarComponent implements OnInit {
     // } else {
     //   this.authFackservice.logout();
     // }
-    this.authService.logout();
+
+
+    // this.authService.logout();
+
+
     this.router.navigate(['/auth/login']);
   }
 

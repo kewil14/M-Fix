@@ -11,14 +11,14 @@
 
     <nav id="navbar" class="navbar">
       <ul>
-        <li><a [routerLink]="['/home']">Accueil</a></li>
-        <li><a [routerLink]="['/aboutUS']">Services</a></li>
-        <li><a [routerLink]="['/menus']">Nos prix</a></li>
-        <li><a [routerLink]="['/events']">Evenements</a></li>
-        <li><a [routerLink]="['/chefs']">Techniciens</a></li>
-        <li><a [routerLink]="['/gallery']">Gallery</a></li>
+        <li><a [routerLink]="['/home']">{{'HEADER.HOME' | translate | titlecase}}</a></li>
+        <li><a [routerLink]="['/aboutUS']">{{'HEADER.SERVICE' | translate | titlecase}}</a></li>
+        <li><a [routerLink]="['/menus']">{{'HEADER.PRODUCT' | translate | titlecase}}</a></li>
+        <li><a [routerLink]="['/events']">{{'HEADER.EVENT' | translate | titlecase}}</a></li>
+        <li><a [routerLink]="['/chefs']">{{'HEADER.TECHNICIAN' | translate | titlecase}}</a></li>
+        <li><a [routerLink]="['/gallery']">{{'HEADER.GALLERY' | translate | titlecase}}</a></li>
         
-        <li><a [routerLink]="['/contact']">Contact</a></li>
+        <li><a [routerLink]="['/contact']">{{'HEADER.CONTACT' | translate | titlecase}}</a></li>
       </ul>
     </nav><!-- .navbar -->
 
@@ -29,4 +29,23 @@
     <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
   </div>
+
+  <div class="dropdown me-4 topbar-head-dropdown header-item" ngbDropdown>
+    <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle shadow-none"
+        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>
+        <img *ngIf="flagvalue !== undefined" src="{{flagvalue}}" alt="Header Language" height="20"
+            class="rounded">
+        <img *ngIf="flagvalue === undefined" src="{{valueset}}" alt="Header Language" height="20"
+            class="rounded">
+    </button>
+    <div class="dropdown-menu dropdown-menu-end" ngbDropdownMenu>
+        <a href="javascript:void(0);" class="dropdown-item notify-item language py-2" data-lang="eng"
+            *ngFor="let item of listLang" (click)="setLanguage(item.text, item.lang, item.flag)"
+            [ngClass]="{'active': cookieValue === item.lang}">
+            <img src="{{item.flag}}" alt="user-image" class="me-2 rounded" height="18"> <span
+                class="align-middle">{{item.text}}</span>
+        </a>
+    </div>
+
+</div>
 </header><!-- End Header -->

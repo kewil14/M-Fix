@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { NgbDropdownModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
-import { SimplebarAngularModule } from 'simplebar-angular';
-import { LanguageService } from '../core/services/language.service';
 // import { TranslateModule } from '@ngx-translate/core';
 
 // Component pages
@@ -18,6 +16,9 @@ import { HorizontalComponent } from './horizontal/horizontal.component';
 import { HorizontalTopbarComponent } from './horizontal-topbar/horizontal-topbar.component';
 import { TwoColumnComponent } from './two-column/two-column.component';
 import { TwoColumnSidebarComponent } from './two-column-sidebar/two-column-sidebar.component';
+import { SimplebarAngularModule } from 'simplebar-angular';
+import { TranslateModule } from '@ngx-translate/core';
+import { LanguageService } from '../core/shared/services/language.service';
 
 
 
@@ -39,9 +40,9 @@ import { TwoColumnSidebarComponent } from './two-column-sidebar/two-column-sideb
     RouterModule,
     NgbDropdownModule,
     NgbNavModule,
-    // SimplebarAngularModule,
-    // TranslateModule,
+    SimplebarAngularModule,
+    TranslateModule,
   ],
-  // providers: [LanguageService]
+  providers: [LanguageService]
 })
 export class LayoutsModule { }

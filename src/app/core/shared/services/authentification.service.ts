@@ -21,7 +21,7 @@ export class AuthentificationService {
    * @returns Observable<AuthentificationDto>
    */
   login(loginDto: LoginDto): Observable<AuthentificationDto> {
-    return this.http?.post(API_URLS.CUSTOMERS_URL + `/authentification`, loginDto).pipe(share());
+    return this.http?.post(API_URLS.CUSTOMERS_URL + `/auth/login`, loginDto).pipe(share());
   }
   
   /**

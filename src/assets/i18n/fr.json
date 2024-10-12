@@ -1,0 +1,11 @@
+{
+  "HEADER": {
+    "HOME": "accueil",
+    "SERVICE": "services",
+    "PRODUCT": "nos produits",
+    "EVENT": "evenements",
+    "TECHNICIAN": "techniciens",
+    "GALLERY": "galerie",
+    "CONTACT": "contact"
+  }
+}

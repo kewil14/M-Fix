@@ -37,6 +37,8 @@
               "src/assets/vendor/glightbox/css/glightbox.min.css",
               "src/assets/vendor/swiper/swiper-bundle.min.css" ,
               "src/assets/css/main.css"
+
+
             ],
             "scripts": [
               "src/assets/vendor/bootstrap/js/bootstrap.bundle.min.js",

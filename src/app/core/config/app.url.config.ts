@@ -1,12 +1,12 @@
 import {environment} from '../../../environments/environment';
 
 const API_CUSTOMER = environment.baseUrlCustomers;
-const API_INSTANCE_SAAS = environment.baseUrlInstanceSaas;
+// const API_INSTANCE_SAAS = environment.baseUrlInstanceSaas;
 const API_GAMES = environment.baseUrlGame
 
 export const API_URLS = {
   CUSTOMERS_URL: API_CUSTOMER,
-  INSTANCE_SAAS_URL: API_INSTANCE_SAAS,
+  // INSTANCE_SAAS_URL: API_INSTANCE_SAAS,
   GAME_URL: API_GAMES,
 };
 

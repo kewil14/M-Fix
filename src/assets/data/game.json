@@ -1,0 +1,66 @@
+
+{
+    "game":[
+        {
+        "id":"1",
+        "name":"pick 3",
+        "description": "ceci consiste a...",
+        "background":"./assets/images/games/pick3.png",
+        "statut": true,
+        "categorie": "pick"
+        },
+        {
+        "id":"2",
+        "name":"pick 4",
+        "description": "ceci consiste a...",
+        "background":"./assets/images/games/pick4.png",
+        "statut": true,
+        "categorie": "pick"
+        },
+        {
+        "id":"3",
+        "name":"scratched cart",
+        "description": "ceci consiste a...",
+        "background":"./assets/images/games/scratch.jpg",
+        "statut": true,
+        "categorie": "scratch"
+        },
+        {
+        "id":"4",
+        "name":"5/90",
+        "description": "ceci consiste a...",
+        "background":"./assets/images/games/5_90.jpg",
+        "statut": true,
+        "categorie": "pick"
+        },
+        {
+        "id":"5",
+        "name":"roulette",
+        "description": "ceci consiste a...",
+        "background":"https://img.themesbrand.com/velzon/images/img-2.gif",
+        "statut": true,
+        "categorie": "pick"
+        },
+        {
+        "id":"6",
+        "name":"pierre-feuille-ciseaux",
+        "description": "ceci consiste a...",
+        "background":"https://img.themesbrand.com/velzon/images/img-3.gif",
+        "statut": true,
+        "categorie": "pick"
+        },
+        {
+        "id":"7",
+        "name":"2-de",
+        "description": "ceci consiste a...",
+        "background":"https://img.themesbrand.com/velzon/images/img-1.gif",
+        "statut": true,
+        "categorie": "pick"
+        }
+    ],
+    "status" : ["OK"],
+    "messages" : [
+        "message 1",
+        "message 0"
+        ]
+  }
