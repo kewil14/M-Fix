@@ -17,7 +17,7 @@
         <li><a [routerLink]="['/events']">{{'HEADER.EVENT' | translate | titlecase}}</a></li>
         <li><a [routerLink]="['/chefs']">{{'HEADER.TECHNICIAN' | translate | titlecase}}</a></li>
         <li><a [routerLink]="['/gallery']">{{'HEADER.GALLERY' | translate | titlecase}}</a></li>
-        
+
         <li><a [routerLink]="['/contact']">{{'HEADER.CONTACT' | translate | titlecase}}</a></li>
       </ul>
     </nav><!-- .navbar -->
@@ -28,6 +28,13 @@
     <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
     <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <button class="btn btn-outline-success " routerLink="/auth">Login</button>
+
+    <!-- pense a rediriger sur la route du register -->
+    <button class="btn btn-outline-primary ms-2" routerLink="/">Register</button>
   </div>
 
   <div class="dropdown me-4 topbar-head-dropdown header-item" ngbDropdown>

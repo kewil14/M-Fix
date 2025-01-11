@@ -15,7 +15,7 @@ import { BookATableComponent } from './yummy/book-atable/book-atable.component';
 import { GalleryComponent } from './yummy/gallery/gallery.component';
 import { ContactComponent } from './yummy/contact/contact.component';
 import { FooterComponent } from './yummy/footer/footer.component';
-import { LayoutsModule } from './layouts/layouts.module';
+// import { LayoutsModule } from './layouts/layouts.module';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
@@ -34,17 +34,17 @@ import { TranslateModule } from '@ngx-translate/core';
     GalleryComponent,
     ContactComponent,
     FooterComponent,
-    
+
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     NgbCarouselModule,
-    LayoutsModule,
+    // LayoutsModule,
     CoreModule,
     TranslateModule,
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]
