@@ -1,4 +1,4 @@
-let serverAdress = 'http://95.111.255.47:9095'
+let serverAdress = 'http://217.77.8.234:8070'
 export const environment = {
   production: true,
   baseUrlCustomers: `${serverAdress}/api`,

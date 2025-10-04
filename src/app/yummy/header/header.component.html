@@ -1,40 +1,28 @@
-<!-- ======= Header ======= -->
 <header id="header" class="header fixed-top d-flex align-items-center fondecran">
   <div class="container d-flex align-items-center justify-content-between">
 
     <a href="index.html" class="logo d-flex  align-items-center me-auto ">
-      <!-- <h2 class="text-primary fw-bold" style="font-family: fantasy, sans-serif;">M.FI</h2> -->
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <img src="assets/img/images/Untitled.jpeg" class="img-fluid custom-img"  alt="">
-      <!-- <h1>MR FIX <span class="text-info">.</span></h1> -->
     </a>
 
     <nav id="navbar" class="navbar">
       <ul>
         <li><a [routerLink]="['/home']">{{'HEADER.HOME' | translate | titlecase}}</a></li>
         <li><a [routerLink]="['/aboutUS']">{{'HEADER.SERVICE' | translate | titlecase}}</a></li>
-        <li><a [routerLink]="['/menus']">{{'HEADER.PRODUCT' | translate | titlecase}}</a></li>
+        <li><a [routerLink]="['/products']">{{'HEADER.PRODUCT' | translate | titlecase}}</a></li>
         <li><a [routerLink]="['/events']">{{'HEADER.EVENT' | translate | titlecase}}</a></li>
-        <li><a [routerLink]="['/chefs']">{{'HEADER.TECHNICIAN' | translate | titlecase}}</a></li>
+        <li><a [routerLink]="['/technicians']">{{'HEADER.TECHNICIAN' | translate | titlecase}}</a></li>
         <li><a [routerLink]="['/gallery']">{{'HEADER.GALLERY' | translate | titlecase}}</a></li>
-
         <li><a [routerLink]="['/contact']">{{'HEADER.CONTACT' | translate | titlecase}}</a></li>
       </ul>
-    </nav><!-- .navbar -->
+    </nav>
 
     <a href="https://wa.me/237682146548?text=Hello..." class="btn-book-a-table bg-success bi bi-whatsapp"></a>
 
-    <!-- <a class="btn-book-a-table" [routerLink]="['/bookatable']">Book a Table</a> -->
     <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
     <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
 
-  </div>
-
-  <div class="d-flex justify-content-center">
-    <button class="btn btn-outline-success " routerLink="/auth">Login</button>
-
-    <!-- pense a rediriger sur la route du register -->
-    <button class="btn btn-outline-primary ms-2" routerLink="/">Register</button>
   </div>
 
   <div class="dropdown me-4 topbar-head-dropdown header-item" ngbDropdown>
@@ -53,6 +41,5 @@
                 class="align-middle">{{item.text}}</span>
         </a>
     </div>
-
 </div>
-</header><!-- End Header -->
+</header>

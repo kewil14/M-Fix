@@ -7,5 +7,10 @@
     "TECHNICIAN": "techniciens",
     "GALLERY": "galerie",
     "CONTACT": "contact"
+  },
+  "HOME": {
+    "TITLE": "LA QUALITE NOTRE PRIORITE",
+    "SUBTITLE": "Vente des accessoires et depannage des smartphones, Desktop & Laptop",
+    "BUTTON": "Watch Video"
   }
 }

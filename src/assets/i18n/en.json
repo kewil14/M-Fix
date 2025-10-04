@@ -7,5 +7,10 @@
     "TECHNICIAN": "technician",
     "GALLERY": "gallery",
     "CONTACT": "contact"
+  },
+  "HOME": {
+    "TITLE": "QUALITY OUR PRIORITY",
+    "SUBTITLE": "Sale of accessories and repair of smartphones, desktops and laptops",
+    "BUTTON": "Watch Video"
   }
 }

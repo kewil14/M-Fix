@@ -8,6 +8,12 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { APP_ENUMS } from './config/app.enums.config';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { reducers } from './core.state';
+import { EffectsModule } from '@ngrx/effects';
+import { ProfileEffects } from './ngrx/profile/profile.effects';
+
 export function createTranslateLoader(http: HttpClient): any {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
 }
@@ -24,6 +30,11 @@ export function createTranslateLoader(http: HttpClient): any {
         deps: [HttpClient]  
       }
     }),
+    StoreModule.forRoot(reducers, {}),
+    EffectsModule.forRoot([
+      ProfileEffects,
+    ]),
+    StoreDevtoolsModule.instrument(),
     
   ],
   providers: [
