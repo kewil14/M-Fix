@@ -12,5 +12,39 @@
     "TITLE": "QUALITY OUR PRIORITY",
     "SUBTITLE": "Sale of accessories and repair of smartphones, desktops and laptops",
     "BUTTON": "Watch Video"
+  },
+  "CONTACT": {
+    "OUR_ADDRESS": "our adress",
+    "EMAIL_US": "email us",
+    "CALL_US": "call us",
+    "OPENING_HOURS": "opening hours",
+    "NEED_HELP": "need help",
+    "CONTACT_US": "contact us"
+  },
+  "GALERY": {
+    "GALERY": "gallery",
+    "CHECK": "check",
+    "OUR_GALLERY": "our gallery"
+  },
+  "MAINTENANCE": {
+    "UNDER_MAINTAIN": "under maintain",
+    "TEXT": "We're improving your experience! Our shop and repair services will be back very soon with improved performance and new features."
+  },
+  "ABOUT": {
+    "ABOUT_US": "A propos de nous",
+    "LEARN_SERVICE": "Learn more about our services",
+    "ABOUT": "ABOUT",
+    "REPAIR_MOTHERBOARD": "Motherboard repair",
+    "LIBELLE": "Mr Fix Repair is a company that repairs and sells electronic and computer equipment.",
+    "WHY": "Why choose Mr. Fix?"
+  },
+  "FOOTER": {
+    "PHONE": "phone",
+    "OPENING_HOURS":"opening hours",
+    "MON-SAT": "mon-sat: 08am - 6pm",
+    "SUNDAY": "sunday: close",
+    "FOLLOW_US": "follow us",
+    "COPYRIGHT": "all rights reserved",
+    "DESIGN_BY": "design by"
   }
 }

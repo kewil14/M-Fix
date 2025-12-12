@@ -5,3 +5,175 @@
     width: 100px; /* Définissez la largeur souhaitée */
     height: 150px; /* La hauteur sera ajustée automatiquement pour maintenir les proportions */
   }
+
+
+  /* ============================================
+   STYLE LOGO RESPONSIVE - MRFIX
+   ============================================ */
+
+/* Style de base pour le conteneur du logo */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+  /* Limite la largeur maximale - AUGMENTÉE pour plus de visibilité */
+  max-width: 350px;
+}
+
+/* Style du logo avec dimensions fluides */
+.logo .custom-img {
+  width: 100%;
+  height: auto;
+  /* Maintient le ratio d'aspect de l'image */
+  aspect-ratio: auto;
+  /* Hauteur maximale pour contrôler la taille - AUGMENTÉE */
+  max-height: 80px;
+  /* Améliore la qualité du rendu de l'image */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  /* Transition douce pour les animations */
+  transition: transform 0.3s ease, filter 0.3s ease;
+  /* Évite les bords flous lors du redimensionnement */
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Effet au survol (hover) */
+.logo:hover .custom-img {
+  /* Légère augmentation de taille */
+  transform: scale(1.05);
+  /* Optionnel : ajoute une légère luminosité */
+  filter: brightness(1.1);
+}
+
+/* Effet au clic */
+.logo:active .custom-img {
+  transform: scale(0.98);
+}
+
+/* ============================================
+   MEDIA QUERIES - RESPONSIVE
+   ============================================ */
+
+/* Très petits écrans (téléphones en portrait) */
+@media (max-width: 576px) {
+  .logo {
+    max-width: 200px;
+    padding: 0.3rem;
+  }
+  
+  .logo .custom-img {
+    max-height: 55px;
+  }
+}
+
+/* Petits écrans (téléphones en paysage, petites tablettes) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .logo {
+    max-width: 240px;
+  }
+  
+  .logo .custom-img {
+    max-height: 65px;
+  }
+}
+
+/* Tablettes */
+@media (min-width: 769px) and (max-width: 992px) {
+  .logo {
+    max-width: 300px;
+  }
+  
+  .logo .custom-img {
+    max-height: 75px;
+  }
+}
+
+/* Écrans moyens à grands (desktop) */
+@media (min-width: 993px) {
+  .logo {
+    max-width: 350px;
+  }
+  
+  .logo .custom-img {
+    max-height: 80px;
+  }
+}
+
+/* Très grands écrans (large desktop) */
+@media (min-width: 1400px) {
+  .logo {
+    max-width: 400px;
+  }
+  
+  .logo .custom-img {
+    max-height: 90px;
+  }
+}
+
+/* ============================================
+   STYLES OPTIONNELS AVANCÉS
+   ============================================ */
+
+/* Si le logo est dans une navbar sticky/fixed */
+.navbar-scrolled .logo {
+  max-width: 240px;
+  transition: max-width 0.3s ease;
+}
+
+.navbar-scrolled .logo .custom-img {
+  max-height: 55px;
+  transition: max-height 0.3s ease;
+}
+
+/* Version avec ombre portée (optionnel) */
+.logo-with-shadow .custom-img {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.logo-with-shadow:hover .custom-img {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15)) brightness(1.1);
+}
+
+/* Version avec bordure arrondie (si logo carré/rectangulaire) */
+.logo-rounded .custom-img {
+  border-radius: 8px;
+}
+
+/* Version avec fond blanc (utile si logo avec transparence) */
+.logo-bg .custom-img {
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation de chargement (fade-in) */
+@keyframes fadeInLogo {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo .custom-img {
+  animation: fadeInLogo 0.5s ease-out;
+}
+
+/* Mode sombre (dark mode) */
+@media (prefers-color-scheme: dark) {
+  .logo .custom-img {
+    /* Ajuste la luminosité pour le mode sombre si nécessaire */
+    filter: brightness(0.95);
+  }
+  
+  .logo:hover .custom-img {
+    filter: brightness(1.05);
+  }
+}

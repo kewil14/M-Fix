@@ -17,6 +17,7 @@ import { FooterComponent } from './front-office/footer/footer.component';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
+import { SharedModuleModule } from './shared-module/shared-module.module';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { TranslateModule } from '@ngx-translate/core';
     NgbCarouselModule,
     CoreModule,
     TranslateModule,
-
+    SharedModuleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

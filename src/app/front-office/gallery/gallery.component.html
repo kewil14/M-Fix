@@ -1,13 +1,17 @@
-<!-- ======= Gallery Section ======= -->
 <section id="gallery" class="gallery section-bg">
   <div class="container" data-aos="fade-up">
 
     <div class="section-header">
-      <h2>gallery</h2>
-      <p>Check <span class="text-primary">Our Gallery</span></p>
+      <h2>{{'GALERY.GALERY' | translate | titlecase}}</h2>
+      <p>{{'GALERY.CHECK' | translate | titlecase}} <span class="text-primary">{{'GALERY.OUR_GALLERY' | translate | titlecase}}</span></p>
     </div>
 
-    <div class="gallery-slider swiper">
+    <!-- composant de maintenance -->
+     <div class="d-flex justify-content-center">
+       <app-maintenance-page></app-maintenance-page>
+     </div>
+
+    <!-- <div class="gallery-slider swiper">
       <div class="swiper-wrapper align-items-center">
         <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/images/user.jpg"><img src="assets/img/images/user.jpg" class="img-fluid" alt=""></a></div>
         <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/images/unlock.jpg"><img src="assets/img/images/unlock.jpg" class="img-fluid" alt=""></a></div>
@@ -21,7 +25,7 @@
         <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/images/stage.jpg"><img src="assets/img/images/stage.jpg" class="img-fluid" alt=""></a></div>
       </div>
       <div class="swiper-pagination "></div>
-    </div>
+    </div> -->
 
   </div>
-</section><!-- End Gallery Section -->
+</section>

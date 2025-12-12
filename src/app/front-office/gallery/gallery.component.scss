@@ -1,0 +1,208 @@
+// // gallery.component.scss
+
+// /* ============================================
+//    LOADING STYLES
+//    ============================================ */
+
+// .gallery-loading {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   min-height: 400px;
+//   padding: 3rem 0;
+// }
+
+// .loading-content {
+//   text-align: center;
+//   max-width: 300px;
+// }
+
+// /* Spinner animé */
+// .spinner {
+//   width: 60px;
+//   height: 60px;
+//   margin: 0 auto 1.5rem;
+//   border: 4px solid rgba(0, 0, 0, 0.1);
+//   border-left-color: var(--color-primary, #007bff);
+//   border-radius: 50%;
+//   animation: spin 1s linear infinite;
+// }
+
+// @keyframes spin {
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform: rotate(360deg);
+//   }
+// }
+
+// /* Texte de chargement */
+// .loading-text {
+//   font-size: 1.1rem;
+//   color: #666;
+//   margin-bottom: 1rem;
+//   font-weight: 500;
+// }
+
+// /* Barre de progression */
+// .progress-bar {
+//   width: 100%;
+//   height: 8px;
+//   background-color: #e0e0e0;
+//   border-radius: 10px;
+//   overflow: hidden;
+//   margin-bottom: 0.5rem;
+// }
+
+// .progress-fill {
+//   height: 100%;
+//   background: linear-gradient(
+//     90deg,
+//     var(--color-primary, #007bff) 0%,
+//     var(--color-secondary, #0056b3) 100%
+//   );
+//   border-radius: 10px;
+//   transition: width 0.3s ease;
+//   animation: progressPulse 1.5s ease-in-out infinite;
+// }
+
+// @keyframes progressPulse {
+//   0%, 100% {
+//     opacity: 1;
+//   }
+//   50% {
+//     opacity: 0.7;
+//   }
+// }
+
+// /* Pourcentage */
+// .loading-percentage {
+//   font-size: 0.9rem;
+//   color: var(--color-primary, #007bff);
+//   font-weight: 600;
+//   margin-top: 0.5rem;
+// }
+
+// /* ============================================
+//    GALLERY CONTENT
+//    ============================================ */
+
+// .gallery-content {
+//   opacity: 1;
+//   transform: translateY(0);
+//   transition: opacity 0.5s ease, transform 0.5s ease;
+// }
+
+// .gallery-content.hidden {
+//   opacity: 0;
+//   transform: translateY(20px);
+//   pointer-events: none;
+//   position: absolute;
+//   visibility: hidden;
+// }
+
+// /* Animation d'apparition de la galerie */
+// @keyframes fadeInUp {
+//   from {
+//     opacity: 0;
+//     transform: translateY(30px);
+//   }
+//   to {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }
+
+// .gallery-content:not(.hidden) {
+//   animation: fadeInUp 0.6s ease-out;
+// }
+
+// /* ============================================
+//    ALTERNATIVE LOADING STYLES (3 options)
+//    ============================================ */
+
+// /* Option 2: Spinner avec points */
+// .spinner-dots {
+//   display: flex;
+//   justify-content: center;
+//   gap: 0.5rem;
+//   margin: 0 auto 1.5rem;
+// }
+
+// .spinner-dots span {
+//   width: 12px;
+//   height: 12px;
+//   background-color: var(--color-primary, #007bff);
+//   border-radius: 50%;
+//   animation: dotBounce 1.4s infinite ease-in-out both;
+// }
+
+// .spinner-dots span:nth-child(1) {
+//   animation-delay: -0.32s;
+// }
+
+// .spinner-dots span:nth-child(2) {
+//   animation-delay: -0.16s;
+// }
+
+// @keyframes dotBounce {
+//   0%, 80%, 100% {
+//     transform: scale(0);
+//   }
+//   40% {
+//     transform: scale(1);
+//   }
+// }
+
+// /* Option 3: Spinner moderne avec gradient */
+// .spinner-gradient {
+//   width: 60px;
+//   height: 60px;
+//   margin: 0 auto 1.5rem;
+//   border-radius: 50%;
+//   background: conic-gradient(
+//     from 0deg,
+//     var(--color-primary, #007bff) 0deg,
+//     transparent 360deg
+//   );
+//   animation: rotate 1s linear infinite;
+//   position: relative;
+// }
+
+// .spinner-gradient::before {
+//   content: '';
+//   position: absolute;
+//   inset: 4px;
+//   background: white;
+//   border-radius: 50%;
+// }
+
+// @keyframes rotate {
+//   100% {
+//     transform: rotate(360deg);
+//   }
+// }
+
+// /* ============================================
+//    RESPONSIVE
+//    ============================================ */
+
+// @media (max-width: 768px) {
+//   .gallery-loading {
+//     min-height: 300px;
+//   }
+
+//   .spinner {
+//     width: 50px;
+//     height: 50px;
+//   }
+
+//   .loading-text {
+//     font-size: 1rem;
+//   }
+
+//   .loading-content {
+//     max-width: 250px;
+//   }
+// }

@@ -10,7 +10,44 @@
   },
   "HOME": {
     "TITLE": "LA QUALITE NOTRE PRIORITE",
-    "SUBTITLE": "Vente des accessoires et depannage des smartphones, Desktop & Laptop",
-    "BUTTON": "Watch Video"
+    "SUBTITLE": "vente des accessoires et dépannage des smartphones, Desktop & Laptop",
+    "BUTTON": "Regarder la Video"
+  },
+  "CONTACT": {
+    "OUR_ADDRESS": "notre adresse",
+    "EMAIL_US": "envoyez-nous un email",
+    "CALL_US": "nous appeler",
+    "OPENING_HOURS": "heures d'ouvertures",
+    "NEED_HELP": "besoin d'aide",
+    "CONTACT_US": "nous contacter"
+  },
+  "GALERY": {
+    "GALERY": "gallerie",
+    "CHECK": "parcourez",
+    "OUR_GALLERY": "notre gallerie"
+  },
+  "MAINTENANCE": {
+    "UNDER_MAINTAIN": "en maintenance",
+    "TEXT": "Nous améliorons votre expérience ! Notre boutique et nos services de réparation reviennent très bientôt avec plus de performances et de nouvelles fonctionnalités."
+  },
+  "ABOUT": {
+    "ABOUT_US": "about us",
+    "LEARN_SERVICE": "apprennez plus sur nos services",
+    "ABOUT": "A propos",
+    "REPAIR_MOTHERBOARD": "Réparation de carte mère",
+    "LIBELLE": "Mr Fix Electronics est une entreprise de réparation et de vente de matériel électronique et informatique.",
+    "SELL1": "vente de batteries made in Cameroun",
+    "SELL2": "reparation de carte de mère, téléphone, carte mère de pc",
+    "SELL3": "Vente de téléphones et d'ordinateurs",
+    "WHY": "Pourquoi choisir M.Fix?"
+  },
+  "FOOTER": {
+    "PHONE": "téléphone",
+    "OPENING_HOURS":"heures d'ouvertures",
+    "MON-SAT": "lun-sam: 08h - 18h",
+    "SUNDAY": "dimanche: fermé",
+    "FOLLOW_US": "nous suivre",
+    "COPYRIGHT": "tous droit reservés",
+    "DESIGN_BY": "designé par"
   }
 }
