@@ -42,10 +42,10 @@ const routes: Routes = [
       path: 'footer',
       component: FooterLandingComponent
     },
-    {
-      path: 'gallery',
-      component: GalleryComponent
-    },
+    // {
+    //   path: 'gallery',
+    //   component: GalleryComponent
+    // },
     {
       path: 'products',
       component: ProductsComponent

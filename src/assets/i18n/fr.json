@@ -39,7 +39,24 @@
     "SELL1": "vente de batteries made in Cameroun",
     "SELL2": "reparation de carte de mère, téléphone, carte mère de pc",
     "SELL3": "Vente de téléphones et d'ordinateurs",
-    "WHY": "Pourquoi choisir M.Fix?"
+    "WHY": "Pourquoi choisir M.Fix?",
+    "ONE": "Mr Fix est une entreprise spécialisée dans la maintenance, le diagnostic et la réparation de matériels électroniques et informatiques, offrant des solutions fiables et durables aux particuliers comme aux entreprises. Nous intervenons sur une large gamme d’équipements — ordinateurs, périphériques, systèmes informatiques et dispositifs électroniques — tout en proposant la vente d’équipements électroniques et informatiques de qualité, soigneusement sélectionnés pour répondre aux exigences de performance, de sécurité et de longévité. Grâce à une expertise technique éprouvée, un service client réactif et un engagement constant envers l’excellence, Mr Fix accompagne ses clients dans l’optimisation, la sécurisation et la pérennité de leurs infrastructures technologiques.",
+    "TWO": {
+      "CARD_HEADER": "Expertise technique",
+      "CARD_CONTENT": "Nos techniciens qualifiés assurent un diagnostic précis et des interventions efficaces sur vos équipements électroniques et informatiques, quelle que soit leur complexité."
+    },
+    "THREE": {
+      "CARD_HEADER": "Qualité & fiabilité",
+      "CARD_CONTENT": "Nous utilisons des composants fiables et des méthodes éprouvées afin de garantir des réparations durables et des équipements performants sur le long terme."
+    },
+    "FOUR": {
+      "CARD_HEADER": "Satisfaction client",
+      "CARD_CONTENT": "Nous plaçons la satisfaction client au cœur de notre engagement grâce à une écoute attentive, des délais maîtrisés et un accompagnement personnalisé."
+    },
+    "CLIENTS": "Clients",
+    "PROJECTS": "Projects",
+    "HOURS_OF_SUPPORT": "Heures d'assistance",
+    "WORKERS": "Ouvriers"
   },
   "FOOTER": {
     "PHONE": "téléphone",
@@ -49,5 +66,14 @@
     "FOLLOW_US": "nous suivre",
     "COPYRIGHT": "tous droit reservés",
     "DESIGN_BY": "designé par"
+  },
+  "ACTIONS": {
+    "LEARN_MORE": "apprendre plus"
+  },
+  "PRODUCTS": {
+    "HEAD": "nos prix",
+    "HEADER_ONE": "Regardez",
+    "HEADER_TWO": "nos grilles de prix"
   }
+
 }

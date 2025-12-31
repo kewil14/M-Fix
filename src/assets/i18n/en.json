@@ -36,7 +36,24 @@
     "ABOUT": "ABOUT",
     "REPAIR_MOTHERBOARD": "Motherboard repair",
     "LIBELLE": "Mr Fix Repair is a company that repairs and sells electronic and computer equipment.",
-    "WHY": "Why choose Mr. Fix?"
+    "WHY": "Why choose Mr. Fix?",
+    "ONE": "Mr Fix is ​a company specializing in the maintenance, diagnostics, and repair of electronic and IT equipment, offering reliable and sustainable solutions to both individuals and businesses. We service a wide range of equipment—computers, peripherals, IT systems, and electronic devices—while also selling high-quality electronic and IT equipment, carefully selected to meet the highest standards of performance, security, and longevity. With proven technical expertise, responsive customer service, and a constant commitment to excellence, Mr Fix supports its clients in optimizing, securing, and ensuring the long-term viability of their technological infrastructures.",
+    "TWO": {
+      "CARD_HEADER": "Technical expertise",
+      "CARD_CONTENT": "Our qualified technicians provide accurate diagnosis and effective interventions on your electronic and IT equipment, regardless of its complexity."
+    },
+    "THREE": {
+      "CARD_HEADER": "Quality & reliability",
+      "CARD_CONTENT": "We use reliable components and proven methods to ensure durable repairs and high-performing equipment over the long term."
+    },
+    "FOUR": {
+      "CARD_HEADER": "Customer satisfaction",
+      "CARD_CONTENT": "We place customer satisfaction at the heart of our commitment through attentive listening, controlled deadlines and personalized support."
+    },
+    "CLIENTS": "Clients",
+    "PROJECTS": "Projects",
+    "HOURS_OF_SUPPORT": "Hours Of Support",
+    "WORKERS": "Workers"
   },
   "FOOTER": {
     "PHONE": "phone",
@@ -46,5 +63,13 @@
     "FOLLOW_US": "follow us",
     "COPYRIGHT": "all rights reserved",
     "DESIGN_BY": "design by"
+  },
+  "ACTIONS": {
+    "LEARN_MORE": "learn more"
+  },
+  "PRODUCTS": {
+    "HEAD": "our prices",
+    "HEADER_ONE": "see",
+    "HEADER_TWO": "our price lists"
   }
 }
