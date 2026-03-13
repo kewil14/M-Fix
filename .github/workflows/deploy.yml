@@ -2,7 +2,7 @@ name: CD Frontend School-management-back-office-web (Dockerized)
 
 on:
   push:
-    branches: [ "main" ] # Déclenché après le merge sur main
+    branches: [ "develop" ] # Déclenché après le merge sur develop on ramenera celo sur une branche de production
 
 jobs:
   build-and-deploy:
