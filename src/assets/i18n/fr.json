@@ -10,7 +10,7 @@
   },
   "HOME": {
     "TITLE": "LA QUALITE NOTRE PRIORITE",
-    "SUBTITLE": "vente des accessoires et dépannage des smartphones, Desktop & Laptop",
+    "SUBTITLE": "Vente et réparation d'électronique et de technologies de batteries au lithium et maintenance logicielle",
     "BUTTON": "Regarder la Video"
   },
   "CONTACT": {
@@ -62,13 +62,16 @@
     "PHONE": "téléphone",
     "OPENING_HOURS":"heures d'ouvertures",
     "MON-SAT": "lun-sam: 08h - 18h",
+    "MON-FRI": "lun-ven: 08h - 18h",
+    "SAT": "sam: 08h - 17h",
     "SUNDAY": "dimanche: fermé",
     "FOLLOW_US": "nous suivre",
     "COPYRIGHT": "tous droit reservés",
     "DESIGN_BY": "designé par"
   },
   "ACTIONS": {
-    "LEARN_MORE": "apprendre plus"
+    "LEARN_MORE": "apprendre plus",
+    "WATCH": "regarder la vidéo"
   },
   "PRODUCTS": {
     "HEAD": "nos prix",

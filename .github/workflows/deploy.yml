@@ -1,0 +1,46 @@
+name: CD Frontend School-management-back-office-web (Dockerized)
+
+on:
+  push:
+    branches: [ "main" ] # Déclenché après le merge sur main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v4
+
+      # On remplace le "git fetch" sur le serveur par une copie directe des fichiers
+      - name: Copier les fichiers sur le serveur via RSYNC
+        uses: Burnett01/rsync-deployments@7.0.1
+        with:
+          switches: -avzr --delete
+          path: ./
+          remote_path: /opt/repo/Mr-Fix-website/M-Fix
+          remote_host: ${{ secrets.SERVER_HOST }}
+          remote_user: ${{ secrets.SERVER_USER }}
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Lancer le build Docker sur le serveur
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /opt/repo/Mr-Fix-website/M-Fix
+            
+            # Plus besoin de git fetch ! Les fichiers sont déjà là grâce à rsync.
+            
+            echo "Vérification des fichiers copiés :"
+            ls -la | head -n 5
+            
+            # On build l'image Docker avec les nouveaux fichiers
+            docker build --no-cache -t mfix_web_angular_2024:beta .
+            
+            docker stop mfix-web-front || true
+            docker rm mfix-web-front || true
+            docker run -d --name mfix-web-front -p 5000:81 mfix_web_angular_2024:beta
+            
+            docker image prune -f

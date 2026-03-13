@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/core/shared/models/product.model';
 
 @Component({
@@ -7,7 +7,7 @@ import { Product } from 'src/app/core/shared/models/product.model';
   styleUrls: ['./products.component.scss']
 })
 
-export class ProductsComponent implements OnInit, OnDestroy {
+export class ProductsComponent implements OnInit {
   product!: Product;
   laptops: Product[] = [
     {
@@ -225,9 +225,7 @@ export class ProductsComponent implements OnInit, OnDestroy {
   ];
   
   
-  ngOnDestroy(): void {
-    throw new Error('Method not implemented.');
-  }
+  
   
   ngOnInit(): void {
     

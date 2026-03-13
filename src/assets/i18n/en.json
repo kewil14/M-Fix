@@ -10,7 +10,7 @@
   },
   "HOME": {
     "TITLE": "QUALITY OUR PRIORITY",
-    "SUBTITLE": "Sale of accessories and repair of smartphones, desktops and laptops",
+    "SUBTITLE": "Sales  And  Repair of Electronics and lithium Battery Technology",
     "BUTTON": "Watch Video"
   },
   "CONTACT": {
@@ -58,14 +58,16 @@
   "FOOTER": {
     "PHONE": "phone",
     "OPENING_HOURS":"opening hours",
-    "MON-SAT": "mon-sat: 08am - 6pm",
+    "MON-FRI": "mon-fri: 08am - 6pm",
+    "SAT": "sat: 08am - 5pm",
     "SUNDAY": "sunday: close",
     "FOLLOW_US": "follow us",
     "COPYRIGHT": "all rights reserved",
     "DESIGN_BY": "design by"
   },
   "ACTIONS": {
-    "LEARN_MORE": "learn more"
+    "LEARN_MORE": "learn more",
+    "WATCH": "watch the video"
   },
   "PRODUCTS": {
     "HEAD": "our prices",
