@@ -7,15 +7,25 @@
 
     <nav id="navbar" class="navbar">
       <ul>
-        <li><a [routerLink]="['/home']">{{'HEADER.HOME' | translate | titlecase}}</a></li>
-        <li><a [routerLink]="['/aboutUS']">{{'HEADER.SERVICE' | translate | titlecase}}</a></li>
-        <li><a [routerLink]="['/products']">{{'HEADER.PRODUCT' | translate | titlecase}}</a></li>
-        <li><a [routerLink]="['/events']">{{'HEADER.EVENT' | translate | titlecase}}</a></li>
-        <li><a [routerLink]="['/technicians']">{{'HEADER.TECHNICIAN' | translate | titlecase}}</a></li>
-        <!-- <li><a [routerLink]="['/gallery']">{{'HEADER.GALLERY' | translate | titlecase}}</a></li> -->
-        <li><a [routerLink]="['/contact']">{{'HEADER.CONTACT' | translate | titlecase}}</a></li>
+        <li><a [routerLink]="['/home']" (click)="closeMobileMenu()">{{'HEADER.HOME' | translate | titlecase}}</a></li>
+        <li><a [routerLink]="['/aboutUS']" (click)="closeMobileMenu()">{{'HEADER.SERVICE' | translate | titlecase}}</a></li>
+        <li><a [routerLink]="['/products']" (click)="closeMobileMenu()">{{'HEADER.PRODUCT' | translate | titlecase}}</a></li>
+        <li><a [routerLink]="['/events']" (click)="closeMobileMenu()">{{'HEADER.EVENT' | translate | titlecase}}</a></li>
+        <li><a [routerLink]="['/technicians']" (click)="closeMobileMenu()">{{'HEADER.TECHNICIAN' | translate | titlecase}}</a></li>
+        <!-- <li><a [routerLink]="['/gallery']" (click)="closeMobileMenu()">{{'HEADER.GALLERY' | translate | titlecase}}</a></li> -->
+        <li><a [routerLink]="['/contact']" (click)="closeMobileMenu()">{{'HEADER.CONTACT' | translate | titlecase}}</a></li>
       </ul>
     </nav>
+
+    <!-- Raccourcis Mobiles (Visible uniquement sur mobile d-lg-none) -->
+    <div class="d-flex align-items-center gap-3 me-2 d-lg-none">
+      <a [routerLink]="['/aboutUS']" class="text-dark fw-bold" style="font-size: 0.9rem;">
+        {{'HEADER.SERVICE' | translate | titlecase}}
+      </a>
+      <a [routerLink]="['/products']" class="text-dark fw-bold" style="font-size: 0.9rem;">
+        {{'HEADER.PRODUCT' | translate | titlecase}}
+      </a>
+    </div>
 
     <a href="https://wa.me/237657763228?text=Hello..." class="btn-book-a-table bg-success bi bi-whatsapp"></a>
 

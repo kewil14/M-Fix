@@ -53,4 +53,20 @@ export class HeaderComponent implements OnInit{
     this.cookieValue = lang;
     this.languageService.setLanguage(lang);
   }
+
+  /**
+   * Ferme le menu mobile lors d'un clic sur un lien
+   * Réplique la logique du template HTML (suppression classe body et toggle icons)
+   */
+  closeMobileMenu() {
+    const body = document.querySelector('body');
+    const mobileNavShow = document.querySelector('.mobile-nav-show');
+    const mobileNavHide = document.querySelector('.mobile-nav-hide');
+
+    if (body?.classList.contains('mobile-nav-active')) {
+      body.classList.remove('mobile-nav-active');
+      mobileNavShow?.classList.remove('d-none');
+      mobileNavHide?.classList.add('d-none');
+    }
+  }
 }
