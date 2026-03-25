@@ -9,6 +9,17 @@ import { Product } from 'src/app/core/shared/models/product.model';
 
 export class ProductsComponent implements OnInit {
   product!: Product;
+
+  // Pagination settings
+  pageSize = 3;
+  pageLaptops = 1;
+  pageSmartphones = 1;
+  pageAccessories = 1;
+  pageMaintenances = 1;
+  pageBatteries = 1;
+  pageBms = 1;
+
+
   laptops: Product[] = [
     {
       id:"001L", 
@@ -220,6 +231,52 @@ export class ProductsComponent implements OnInit {
       description: "Solar Battery, Gel 12v, 100Ah",
       image:  "assets/img/images/batteries/battery6.jpeg",
       price:  "",
+    },
+    
+  ];
+
+  Bms: Product[] = [
+    {
+      id:"001Bms", 
+      name:"4.2 charge",
+      description: "Lithium-ion Battery charger Type-C",
+      image:  "assets/img/images/bms/Untitled.jpeg",
+      price:  "1000 Xaf",
+    },
+    {
+      id:"002Bms", 
+      name:"6S,  BMS OEM   18v",
+      description: "Contrôleur de charge de batterie Li-ion B031",
+      image:  "assets/img/images/bms/bms2.jpeg",
+      price:  "4500 Xaf",
+    },
+    {
+      id:"003Bms", 
+      name:"1500f- 3500F 3s, 12V, BMS original",
+      description: "Contrôleur de charge de batterie Li-ion, charge d'équilibre . Up to 100Ah Max discharge current 15",
+      image:  "assets/img/images/bms/bms3.jpeg",
+      price:  "1500 Xaf",
+    },
+    {
+      id:"004Bms", 
+      name:"800f-1500f 1s, 3.7v,  BMS",
+      description: "Contrôleur de charge pour circuit à 1 cellule. Charge d'équilibrage et protection. Up to 50Ah, Max discharge current 5A, B025",
+      image:  "assets/img/images/bms/bms4.jpeg",
+      price:  "",
+    },
+    {
+      id:"005Bms", 
+      name:"2000f -4000f 4S , BMS OEM, 16.8v, 18v",
+      description: "Up to 100Ah Max discharge current 10A B028",
+      image:  "assets/img/images/bms/bms5.jpeg",
+      price:  "",
+    },
+    {
+      id:"006Bms", 
+      name:"Powerbank BMS 1s  3.6-3.7v",
+      description: "",
+      image:  "assets/img/images/bms/bms6.jpeg",
+      price:  "2500 Xaf",
     },
     
   ];

@@ -9,8 +9,14 @@
     <ul class="nav nav-tabs d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
 
       <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#batteries">
+        <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#batteries">
           <h4>Lithium Batteries</h4>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#bms">
+          <h4>BMS</h4>
         </a>
       </li>
 
@@ -33,7 +39,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#menu-starters">
+        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-starters">
           <h4>Laptops</h4>
         </a>
       </li>
@@ -42,7 +48,7 @@
 
     <div class="tab-content" data-aos="fade-up" data-aos-delay="300">
 
-      <div class="tab-pane fade active show" id="menu-starters">
+      <div class="tab-pane fade" id="menu-starters">
 
         <div class="tab-header text-center">
           <h3>Laptops</h3>
@@ -51,18 +57,21 @@
         <div class="row gy-5">
 
           <!-- boucle for sur ceci -->
-           <div class="col-lg-4 menu-item" *ngFor="let item of laptops"  >
-            <a [href]="item.image" class="glightbox"><img [src]="item.image" class="menu-img img-fluid" alt=""></a>
+           <div class="col-lg-4 menu-item d-flex flex-column" *ngFor="let item of laptops | slice: (pageLaptops-1) * pageSize : pageLaptops * pageSize">
+            <a [href]="item.image" class="glightbox"><img [src]="item.image" class="menu-img img-fluid" alt="" style="height: 250px; object-fit: cover; width: 100%;"></a>
             <h4>{{item.name}}</h4>
-            <p class="ingredients">
+            <p class="ingredients flex-grow-1">
               {{item.description}}
             </p>
-            <p class="price">
+            <p class="price mt-auto">
               {{item.price}} 
             </p>
           </div>
-
          
+        </div>
+        
+        <div class="d-flex justify-content-center mt-4" *ngIf="laptops.length > pageSize">
+            <ngb-pagination [collectionSize]="laptops.length" [(page)]="pageLaptops" [pageSize]="pageSize"></ngb-pagination>
         </div>
       </div>
 
@@ -76,18 +85,21 @@
 
           <!-- parcourir la boucle for -->
 
-          <div class="col-lg-4 menu-item" *ngFor="let item of smartphones">
-            <a [href]="item.image" class="glightbox"><img [src]="item.image" class="menu-img img-fluid" alt=""></a>
+          <div class="col-lg-4 menu-item d-flex flex-column" *ngFor="let item of smartphones | slice: (pageSmartphones-1) * pageSize : pageSmartphones * pageSize">
+            <a [href]="item.image" class="glightbox"><img [src]="item.image" class="menu-img img-fluid" alt="" style="height: 250px; object-fit: cover; width: 100%;"></a>
             <h4>{{item.name}},</h4>
-            <p class="ingredients">
+            <p class="ingredients flex-grow-1">
               {{item.description1}}
             </p>
-            <p class="price">
+            <p class="price mt-auto">
              {{item.price}}
             </p>
           </div>
-
           
+        </div>
+
+        <div class="d-flex justify-content-center mt-4" *ngIf="smartphones.length > pageSize">
+          <ngb-pagination [collectionSize]="smartphones.length" [(page)]="pageSmartphones" [pageSize]="pageSize"></ngb-pagination>
         </div>
       </div>
 
@@ -98,16 +110,20 @@
         </div>
 
         <div class="row gy-5">
-          <div class="col-lg-4 menu-item" *ngFor="let item of accesories">
-            <a [href]="item.image" class="glightbox"><img [src]="item.image" class="menu-img img-fluid" alt=""></a>
+          <div class="col-lg-4 menu-item d-flex flex-column" *ngFor="let item of accesories | slice: (pageAccessories-1) * pageSize : pageAccessories * pageSize">
+            <a [href]="item.image" class="glightbox"><img [src]="item.image" class="menu-img img-fluid" alt="" style="height: 250px; object-fit: cover; width: 100%;"></a>
             <h4>{{item.name}}</h4>
-            <p class="ingredients">
+            <p class="ingredients flex-grow-1">
               {{item.description}}
             </p>
-            <p class="price">
+            <p class="price mt-auto">
               {{item.price}}
             </p>
           </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-4" *ngIf="accesories.length > pageSize">
+          <ngb-pagination [collectionSize]="accesories.length" [(page)]="pageAccessories" [pageSize]="pageSize"></ngb-pagination>
         </div>
       </div>
 
@@ -119,22 +135,26 @@
 
         <div class="row gy-5">
 
-          <div class="col-lg-4 menu-item" *ngFor="let item of maintnances" >
-            <a [href]="item.image" class="glightbox"><img [src]="item.image" class="menu-img img-fluid" alt=""></a>
+          <div class="col-lg-4 menu-item d-flex flex-column" *ngFor="let item of maintnances | slice: (pageMaintenances-1) * pageSize : pageMaintenances * pageSize">
+            <a [href]="item.image" class="glightbox"><img [src]="item.image" class="menu-img img-fluid" alt="" style="height: 250px; object-fit: cover; width: 100%;"></a>
             <h4>{{item.name}}</h4>
-            <p class="ingredients">
+            <p class="ingredients flex-grow-1">
               {{item.description}}
             </p>
-            <p class="price">
+            <p class="price mt-auto">
               {{item.price}}
             </p>
           </div>
 
         </div>
+
+        <div class="d-flex justify-content-center mt-4" *ngIf="maintnances.length > pageSize">
+          <ngb-pagination [collectionSize]="maintnances.length" [(page)]="pageMaintenances" [pageSize]="pageSize"></ngb-pagination>
+        </div>
       </div>
 
 
-      <div class="tab-pane fade" id="batteries">
+      <div class="tab-pane fade active show" id="batteries">
 
         <div class="tab-header text-center">
           <h3>Batteries</h3>
@@ -142,17 +162,48 @@
 
         <div class="row gy-5">
 
-          <div class="col-lg-4 menu-item" *ngFor="let item of Batteries">
-            <a [href]="item.image" class="glightbox"><img [src]="item.image" class="menu-img img-fluid" alt=""></a>
+          <div class="col-lg-4 menu-item d-flex flex-column" *ngFor="let item of Batteries | slice: (pageBatteries-1) * pageSize : pageBatteries * pageSize">
+            <a [href]="item.image" class="glightbox"><img [src]="item.image" class="menu-img img-fluid" alt="" style="height: 250px; object-fit: cover; width: 100%;"></a>
             <h4>{{item.name}}</h4>
-            <p class="ingredients">
+            <p class="ingredients flex-grow-1">
               {{item.description}}
             </p>
-            <p class="price">
+            <p class="price mt-auto">
               {{item.price}}
             </p>
           </div>
 
+        </div>
+
+        <div class="d-flex justify-content-center mt-4" *ngIf="Batteries.length > pageSize">
+          <ngb-pagination [collectionSize]="Batteries.length" [(page)]="pageBatteries" [pageSize]="pageSize"></ngb-pagination>
+        </div>
+      </div>
+
+
+      <div class="tab-pane fade" id="bms">
+
+        <div class="tab-header text-center">
+          <h3>BMS</h3>
+        </div>
+
+        <div class="row gy-5">
+
+          <div class="col-lg-4 menu-item d-flex flex-column" *ngFor="let item of Bms | slice: (pageBms-1) * pageSize : pageBms * pageSize">
+            <a [href]="item.image" class="glightbox"><img [src]="item.image" class="menu-img img-fluid" alt="" style="height: 250px; object-fit: cover; width: 100%;"></a>
+            <h4>{{item.name}}</h4>
+            <p class="ingredients flex-grow-1">
+              {{item.description}}
+            </p>
+            <p class="price mt-auto">
+              {{item.price}}
+            </p>
+          </div>
+
+        </div>
+
+        <div class="d-flex justify-content-center mt-4" *ngIf="Bms.length > pageSize">
+          <ngb-pagination [collectionSize]="Bms.length" [(page)]="pageBms" [pageSize]="pageSize"></ngb-pagination>
         </div>
       </div>
 

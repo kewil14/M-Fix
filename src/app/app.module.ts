@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -39,6 +39,7 @@ import { SharedModuleModule } from './shared-module/shared-module.module';
     HttpClientModule,
     AppRoutingModule,
     NgbCarouselModule,
+    NgbPaginationModule,
     CoreModule,
     TranslateModule,
     SharedModuleModule,
