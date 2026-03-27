@@ -13,6 +13,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { reducers } from './core.state';
 import { EffectsModule } from '@ngrx/effects';
 import { ProfileEffects } from './ngrx/profile/profile.effects';
+import { environment } from 'src/environments/environment';
 
 export function createTranslateLoader(http: HttpClient): any {
   return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
@@ -34,7 +35,7 @@ export function createTranslateLoader(http: HttpClient): any {
     EffectsModule.forRoot([
       ProfileEffects,
     ]),
-    StoreDevtoolsModule.instrument(),
+    ...(environment.production ? [] : [StoreDevtoolsModule.instrument()]),
     
   ],
   providers: [

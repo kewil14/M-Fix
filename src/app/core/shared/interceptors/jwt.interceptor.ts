@@ -7,6 +7,7 @@ import {
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { LocalStorageService } from '../services/local-storage.service';
+import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class JwtInterceptor implements HttpInterceptor {
@@ -15,7 +16,12 @@ export class JwtInterceptor implements HttpInterceptor {
     ) { }
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        var auth = this.localStorageService.currentTokenValue;
+        const isApiRequest = request.url.startsWith(environment.baseUrlCustomers) ||
+                             request.url.startsWith(environment.baseUrlFile);
+        if (!isApiRequest) {
+            return next.handle(request);
+        }
+        const auth = this.localStorageService.currentTokenValue;
         const xhr = request.clone({ headers: request.headers.set('authorization', `${auth.prefix}${auth.jwt}`) });
         return next.handle(xhr);
     }

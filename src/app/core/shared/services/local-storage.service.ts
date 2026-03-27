@@ -14,10 +14,18 @@ export class LocalStorageService {
 
   constructor(
   ) {
-    this.currentTokenSubject = new BehaviorSubject<AuthentificationDto>(JSON.parse(localStorage.getItem(APP_ENUMS.PREFIX_TOKEN) || '{}'));
+    // Safari private mode throws SecurityError on localStorage access
+    let storedToken: AuthentificationDto = {} as AuthentificationDto;
+    let storedLang: string = APP_ENUMS.PREFIX_DEFAULT_LANGUAGE;
+    try {
+      storedToken = JSON.parse(localStorage.getItem(APP_ENUMS.PREFIX_TOKEN) || '{}');
+      storedLang = localStorage.getItem(APP_ENUMS.PREFIX_LOCAL_LANG) || APP_ENUMS.PREFIX_DEFAULT_LANGUAGE;
+    } catch (e) {}
+
+    this.currentTokenSubject = new BehaviorSubject<AuthentificationDto>(storedToken);
     this.currentToken = this.currentTokenSubject.asObservable();
 
-    this.localLangSubject = new BehaviorSubject<string>(localStorage.getItem(APP_ENUMS.PREFIX_LOCAL_LANG) || APP_ENUMS.PREFIX_DEFAULT_LANGUAGE);
+    this.localLangSubject = new BehaviorSubject<string>(storedLang);
     this.localLang = this.localLangSubject.asObservable();
   }
 
@@ -25,7 +33,7 @@ export class LocalStorageService {
     return this.localLangSubject.value;
   }
   public setLocalLangValue(lang: string): void {
-    localStorage.setItem(APP_ENUMS.PREFIX_LOCAL_LANG , lang);
+    try { localStorage.setItem(APP_ENUMS.PREFIX_LOCAL_LANG , lang); } catch (e) {}
     this.localLangSubject.next(lang);
   }
 
@@ -34,7 +42,7 @@ export class LocalStorageService {
   }
 
   public setCurrentTokenValue(auth: AuthentificationDto): void {
-    localStorage.setItem(APP_ENUMS.PREFIX_TOKEN , JSON.stringify(auth));
+    try { localStorage.setItem(APP_ENUMS.PREFIX_TOKEN , JSON.stringify(auth)); } catch (e) {}
     this.currentTokenSubject.next(auth);
   }
 
@@ -70,7 +78,7 @@ export class LocalStorageService {
   }
 
   logout(): void {
-    localStorage.removeItem(APP_ENUMS.PREFIX_TOKEN);
+    try { localStorage.removeItem(APP_ENUMS.PREFIX_TOKEN); } catch (e) {}
   }
 
   dbOptions(): any {

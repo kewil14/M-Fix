@@ -8,7 +8,8 @@ export class LangInterceptor implements HttpInterceptor {
     constructor() {}
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        const lang = localStorage.getItem(APP_ENUMS.PREFIX_LOCAL_LANG) || APP_ENUMS.PREFIX_FR;
+        let lang: string;
+        try { lang = localStorage.getItem(APP_ENUMS.PREFIX_LOCAL_LANG) || APP_ENUMS.PREFIX_FR; } catch (e) { lang = APP_ENUMS.PREFIX_FR; }
 
         const lg = request.clone({
             setHeaders: {
