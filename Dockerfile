@@ -11,7 +11,7 @@ RUN npm run build --force
 FROM nginx:latest as prod
 RUN rm -rf /usr/share/nginx/html/*
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY src/environments/environment.prod.ts /etc/nginx/conf.d/
+# COPY src/environments/environment.prod.ts /etc/nginx/conf.d/
 COPY --from=build /usr/local/app/dist/yummy /usr/share/nginx/html
 EXPOSE 81
 CMD ["nginx", "-g", "daemon off;"]
