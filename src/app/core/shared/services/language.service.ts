@@ -25,7 +25,7 @@ export class LanguageService {
     else {
       browserLang = translate.getBrowserLang();
     }
-    translate.use(browserLang.match(/en|fr/) ? browserLang : APP_ENUMS.PREFIX_LOCAL_LANG);
+    translate.use(browserLang?.match(/en|fr/) ? browserLang : APP_ENUMS.PREFIX_DEFAULT_LANGUAGE);
   }
 
   /***
