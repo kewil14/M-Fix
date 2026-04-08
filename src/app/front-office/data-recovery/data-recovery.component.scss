@@ -1,0 +1,371 @@
+// ======= Data Recovery Page Styles =======
+// Utilise les variables CSS définies dans main.css
+
+// ---- HERO ----
+.dr-hero {
+  min-height: 70vh;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  padding: 80px 0 60px;
+
+  // Image de la team flouttée en arrière-plan
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../../../assets/img/images/jjj.jpg');
+    background-size: cover;
+    background-position: center top;
+    filter: blur(5px) brightness(0.2);
+    transform: scale(1.06); // évite les bords blancs causés par le blur
+    z-index: 0;
+  }
+
+  // Dégradé coloré par-dessus l'image pour garder la cohérence visuelle
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(10, 42, 58, 0.75) 0%, rgba(18, 184, 206, 0.25) 100%);
+    z-index: 1;
+  }
+
+  // Tout le contenu texte passe au-dessus
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    font-family: var(--font-primary);
+    margin-bottom: 0.5rem;
+
+    @media (max-width: 768px) { font-size: 2rem; }
+  }
+
+  .dr-hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #12b8ce;
+    margin-bottom: 1rem;
+  }
+
+  .dr-hero-desc {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+  }
+
+  .dr-hero-devices {
+    display: inline-block;
+    text-align: left;
+    margin: 0 auto 1.5rem;
+
+    li {
+      font-size: 1rem;
+      padding: 4px 0;
+      i { color: #12b8ce; margin-right: 8px; }
+    }
+  }
+
+  .dr-hero-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    opacity: 0.85;
+
+    i { margin-right: 6px; color: #12b8ce; }
+  }
+
+  .dr-hero-phone {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+
+    &:hover { color: #12b8ce; text-decoration: none; }
+    i { color: #12b8ce; margin-right: 6px; }
+  }
+}
+
+.btn-whatsapp-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #25d366;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+
+  &:hover {
+    background-color: #1da851;
+    color: #fff;
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+
+  i { font-size: 1.3rem; }
+}
+
+// ---- ABOUT ----
+.dr-about {
+  padding: 60px 0;
+
+  .dr-about-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 220px;
+
+    .dr-about-icon {
+      font-size: 120px;
+      color: #12b8ce;
+      opacity: 0.15;
+    }
+  }
+
+  p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--color-default);
+    margin-bottom: 1.5rem;
+  }
+
+  .dr-about-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+.dr-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f0fbfc;
+  border: 1px solid #12b8ce;
+  color: #0a5f70;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  i { color: #12b8ce; }
+}
+
+// ---- DEVICES ----
+.dr-devices { padding: 60px 0; }
+
+.dr-device-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  height: 100%;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 30px rgba(18, 184, 206, 0.2);
+  }
+
+  i {
+    font-size: 3rem;
+    color: #12b8ce;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 0.88rem;
+    color: #666;
+    margin: 0;
+  }
+}
+
+// ---- PROBLEMS ----
+.dr-problems { padding: 60px 0; }
+
+.dr-problem-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border-left: 4px solid #12b8ce;
+  padding: 16px 20px;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+
+  i {
+    font-size: 1.5rem;
+    color: #12b8ce;
+    flex-shrink: 0;
+  }
+
+  span {
+    font-size: 0.95rem;
+    color: var(--color-default);
+  }
+}
+
+// ---- HOW IT WORKS ----
+.dr-steps { padding: 60px 0; }
+
+.dr-step-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 32px 20px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  height: 100%;
+  position: relative;
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 0.88rem;
+    color: #666;
+    margin: 0;
+  }
+}
+
+.dr-step-number {
+  width: 52px;
+  height: 52px;
+  background: #12b8ce;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 auto 16px;
+}
+
+// ---- PRICING & CONFIDENTIALITY ----
+.dr-pricing { padding: 60px 0; }
+
+.dr-pricing-card,
+.dr-confidentiality-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 36px 32px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  height: 100%;
+
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+    i { color: #12b8ce; margin-right: 8px; }
+  }
+
+  p { color: #555; line-height: 1.7; }
+}
+
+.dr-pricing-range {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #12b8ce;
+  margin: 16px 0;
+}
+
+.dr-pricing-note {
+  font-size: 0.88rem;
+  color: #888;
+  i { margin-right: 4px; }
+}
+
+.dr-confidentiality-card {
+  border-top: 4px solid #12b8ce;
+}
+
+// ---- CTA ----
+.dr-cta {
+  padding: 60px 0;
+
+  .dr-cta-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-secondary);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .dr-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
+
+.btn-cta-contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #12b8ce;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+
+  &:hover {
+    background: #0e9cb0;
+    color: #fff;
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+}
+
+.btn-cta-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25d366;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+
+  &:hover {
+    background: #1da851;
+    color: #fff;
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+}

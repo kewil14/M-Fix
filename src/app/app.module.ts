@@ -14,6 +14,7 @@ import { TechnicianComponent } from './front-office/technician/technician.compon
 import { GalleryComponent } from './front-office/gallery/gallery.component';
 import { ContactComponent } from './front-office/contact/contact.component';
 import { FooterComponent } from './front-office/footer/footer.component';
+import { DataRecoveryComponent } from './front-office/data-recovery/data-recovery.component';
 import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
@@ -32,6 +33,7 @@ import { SharedModuleModule } from './shared-module/shared-module.module';
     GalleryComponent,
     ContactComponent,
     FooterComponent,
+    DataRecoveryComponent,
 
   ],
   imports: [

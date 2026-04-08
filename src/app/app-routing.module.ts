@@ -7,6 +7,7 @@ import { ContactComponent } from './front-office/contact/contact.component'
 import { TechnicianComponent } from './front-office/technician/technician.component'
 import { AboutUsComponent } from './front-office/about-us/about-us.component'
 import { HomeComponent } from './front-office/home/home.component'
+import { DataRecoveryComponent } from './front-office/data-recovery/data-recovery.component'
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 
@@ -54,7 +55,11 @@ const routes: Routes = [
       path: 'temoignage',
       component: TemoignageComponent
     },
-  
+    {
+      path: 'data-recovery',
+      component: DataRecoveryComponent
+    },
+
     {
     path: 'auth',
     loadChildren: () => import('./authentification/authentification.module').then(m => m.AuthentificationModule)
